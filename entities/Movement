@@ -1,0 +1,57 @@
+{
+  "name": "Movement",
+  "type": "object",
+  "properties": {
+    "equipment_id": {
+      "type": "string",
+      "description": "ID do equipamento movimentado"
+    },
+    "equipment_name": {
+      "type": "string",
+      "description": "Nome do equipamento (para refer\u00eancia r\u00e1pida)"
+    },
+    "user_name": {
+      "type": "string",
+      "description": "Nome do usu\u00e1rio que est\u00e1 movimentando"
+    },
+    "from_location": {
+      "type": "string",
+      "description": "Local de origem"
+    },
+    "to_location": {
+      "type": "string",
+      "description": "Local de destino"
+    },
+    "glpi_ticket": {
+      "type": "string",
+      "description": "N\u00famero do chamado GLPI"
+    },
+    "request_proof_url": {
+      "type": "string",
+      "description": "URL do print/prova da solicita\u00e7\u00e3o"
+    },
+    "installed_photo_url": {
+      "type": "string",
+      "description": "URL da foto do equipamento instalado"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "em_transito",
+        "instalado",
+        "cancelado"
+      ],
+      "default": "em_transito",
+      "description": "Status da movimenta\u00e7\u00e3o"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Observa\u00e7\u00f5es da movimenta\u00e7\u00e3o"
+    }
+  },
+  "required": [
+    "equipment_id",
+    "user_name",
+    "to_location"
+  ]
+}
